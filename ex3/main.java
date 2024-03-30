@@ -2,44 +2,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/*BANCO DA CIDADINHA: 
-1 - Cadastrar conta
-2 - Sacar
-3 - Depositar
-4 - Transferir
-5 - Listar contas
-6 - Saldo
-7 - Sair
-
-Digite a opção desejada: 1
-
-Digite o nome do titular: cz
-Digite o número da conta: 001
-Saldo inicial: R$ 0,00
-Conta cadastrada com sucesso
-
-BANCO DA CIDADINHA: 
-1 - Cadastrar conta
-2 - Sacar
-3 - Depositar
-4 - Transferir
-5 - Listar contas
-6 - Saldo
-7 - Sair
-
-Digite a opção desejada: 1
-
-Digite o nome do titular: vzbv
-Digite o número da conta: 002
-Saldo inicial: R$ 0,00
-
-Conta cadastrada com sucesso
-Exception in thread "main" java.util.ConcurrentModificationException
-        at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1013)
-        at java.base/java.util.ArrayList$Itr.next(ArrayList.java:967)
-        at main.main(main.java:41)
-PS C:\Users\Gabriel\Documents\GitHub\Repos\ex3>  */
-
 public class main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -101,7 +63,6 @@ public class main {
                 
                         contas.add(novaConta);
                         System.out.println("Conta cadastrada com sucesso");
-                        System.out.print("AAA");
                         
                     }
                     scanner.nextLine();
@@ -191,10 +152,8 @@ public class main {
                 default:
                     break;
             }
-            System.out.print("BBB");
         } while (opcao != 7);
 
-        System.out.print("CCC");
         scanner.close();
     }
 }
