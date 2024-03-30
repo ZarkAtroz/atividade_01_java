@@ -29,13 +29,13 @@ public class main {
     
                 calculadora = new Calculadora(num1, num2, opcao);
                 resultado = calculadora.getResult();
+
+                System.out.println("O resultado da operação é: " + resultado);
             } else if (opcao == 5) {
                     break;
             } else {
                 System.out.println("Operação inválida!");
             }
         } while (opcao != 5);
-
-        System.out.printf("O valor final da conta é: %.2f", resultado);
     }
 }
