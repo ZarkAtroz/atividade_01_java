@@ -14,6 +14,7 @@ public class main {
             System.out.println("\nAdicionar novo livro:");
             System.out.println("~~SIM - 1");
             System.out.println("~~NAO - 2");
+            System.out.println("Listar livros - 3");
             System.out.print("OPCAO: ");
             opcao = Integer.parseInt(scanner.nextLine());
 
@@ -33,16 +34,21 @@ public class main {
 
             } else if(opcao == 2) {
                 System.out.println("\nSaindo...");
-            } else if(opcao != 1 || opcao != 2) {
+            } else if(opcao == 3) {
+                System.out.println("\nListando livros...");
+
+                for (int j = 0; j < bibList.size(); j++) {
+                    System.out.println("\nLivro " + (j+1));
+                    bibList.get(j).exibirInfo();
+                }
+                
+            } else if(opcao != 1 || opcao != 2 || opcao != 3) {
                 System.out.println("\nOPCAO INVALIDA");
             }
             
         } while (opcao != 2);
 
-        for (int j = 0; j < bibList.size(); j++) {
-            System.out.println("\nLivro " + (j+1));
-            bibList.get(j).exibirInfo();
-        }
+        
         
     }
 }
